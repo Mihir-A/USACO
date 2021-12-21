@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (C:\Dev\USACO\bin\intermediates\Win32\Debug\) contains files shared from another project (ride.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+C:\Dev\USACO\gift1\src\main.cpp(28): warning C4715: 'getPerson': not all control paths return a value
+  gift1.vcxproj -> C:\Dev\USACO\bin\Win32\Debug\gift1.exe

@@ -1,0 +1,3 @@
+﻿  milk2.cpp
+C:\Dev\USACO\milk2\src\milk2.cpp(57): warning C4701: potentially uninitialized local variable 'end' used
+  milk2.vcxproj -> C:\Dev\USACO\bin\x64\Debug\milk2.exe

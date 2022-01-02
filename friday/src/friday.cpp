@@ -6,34 +6,52 @@ TASK: friday
 #include <iostream>
 #include <array>
 #include <fstream>
+#define DAYS_OF_WEEK 7
 
-void calcMonth(int month, int& dayOfWeek, std::array<int, 7>& daysOf13th, bool leap) {
+typedef enum month {
+	jan = 1,
+	feb,
+	mar,
+	apr,
+	may,
+	jun,
+	jul,
+	aug,
+	sep,
+	oct,
+	nov,
+	dec,
+	maxMonth
+} month_t;
+
+void calcMonth(month_t month, int& dayOfWeek, std::array<int, 7>& daysOf13th, bool leap) {
 	int dayOf13th = dayOfWeek - 2;
-	
+
 	if (dayOf13th <= 0) {
-		dayOf13th = 7 + dayOf13th;
+		dayOf13th = DAYS_OF_WEEK + dayOf13th;
 	}
 
 	daysOf13th[dayOf13th - 1] += 1;
 
-	if (month == 4 || month == 6 || month == 9 || month == 11) {
-		dayOfWeek = ((dayOfWeek + 29) % 7) + 1;
+	if (month == apr || month == jun || month == sep || month == nov) {
+		dayOfWeek = ((dayOfWeek + 29) % DAYS_OF_WEEK) + 1;
 	}
-	else if (month == 2 && leap == true) {
-		dayOfWeek = ((dayOfWeek + 28) % 7) + 1;
+	else if (month == feb && leap == true) {
+		dayOfWeek = ((dayOfWeek + 28) % DAYS_OF_WEEK) + 1;
 	}
-	else if (month == 2 && leap == false) {
-		dayOfWeek = ((dayOfWeek + 27) % 7) + 1;
+	else if (month == feb && leap == false) {
+		dayOfWeek = ((dayOfWeek + 27) % DAYS_OF_WEEK) + 1;
 	}
 	else {
-		dayOfWeek = ((dayOfWeek + 30) % 7) + 1;
+		dayOfWeek = ((dayOfWeek + 30) % DAYS_OF_WEEK) + 1;
 	}
 }
 
 int main() {
-	std::array<int, 7> daysOf13th = {0, 0, 0, 0, 0, 0};
+	std::array<int, 7> daysOf13th = { 0, 0, 0, 0, 0, 0 };
 	std::ifstream infile("friday.in");
-	int numOfYears, month = 1, dayOfWeek = 3, year = 1900;
+	int numOfYears, dayOfWeek = 3, year = 1900;
+	month_t month = jan;
 	bool leap;
 
 	infile >> numOfYears;
@@ -50,10 +68,10 @@ int main() {
 		}
 
 		calcMonth(month, dayOfWeek, daysOf13th, leap);
-		month++;
-		if (month == 13) {
+		month = (month_t)((int)month + 1);
+		if (month == maxMonth) {
 			year++;
-			month = 1;
+			month = jan;
 		}
 	}
 

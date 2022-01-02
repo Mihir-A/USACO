@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "beads", "beads\beads.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "milk2", "milk2\milk2.vcxproj", "{D43A29FF-8745-424B-AED0-A8030BADE95C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "transform", "transform\transform.vcxproj", "{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{D43A29FF-8745-424B-AED0-A8030BADE95C}.Release|x64.Build.0 = Release|x64
 		{D43A29FF-8745-424B-AED0-A8030BADE95C}.Release|x86.ActiveCfg = Release|Win32
 		{D43A29FF-8745-424B-AED0-A8030BADE95C}.Release|x86.Build.0 = Release|Win32
+		{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}.Debug|x64.ActiveCfg = Debug|x64
+		{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}.Debug|x64.Build.0 = Debug|x64
+		{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}.Debug|x86.ActiveCfg = Debug|Win32
+		{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}.Debug|x86.Build.0 = Debug|Win32
+		{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}.Release|x64.ActiveCfg = Release|x64
+		{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}.Release|x64.Build.0 = Release|x64
+		{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}.Release|x86.ActiveCfg = Release|Win32
+		{3FAC1CD3-4A07-4B69-9F77-62522F0C9DC1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

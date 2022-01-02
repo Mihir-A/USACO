@@ -6,3 +6,5 @@
 /.vs
 *.idb
 *.lik
+/intermediates
+/Debug

@@ -13,22 +13,22 @@ TASK: milk2
 
 int findLongestTime(std::vector<std::pair<int, int>>& times) {
 	std::sort(times.begin(), times.end());
-	int start = times[0].first, end = times[0].second, maxTime = 0;
-
-	for (int i = 1; i < times.size(); i++) {
-		if (times[i].first <= end && times[i].second > end) {
-			end = times[i].second;
-		}
-		else {
-			maxTime = std::max(maxTime, end - start);
-			end = times[i].second;
-			start = times[i].first;
-			maxTime = std::max(maxTime, end - start);
+	int max = 0;
+	
+	for (int j = 0; j < times.size() - 1; j++) {
+		if (times[j].second >= times[j + 1].first) {
+			times[j].second = std::max(times[j + 1].second, times[j].second);
+			times[j].first = std::min(times[j + 1].first, times[j].first);
+			times.erase(times.begin() + j + 1);
+			j = -1;
 		}
 	}
-	maxTime = std::max(maxTime, end - start);
 
-	return maxTime;
+	for (int i = 0; i < times.size(); i++) {
+		max = std::max(times[i].second - times[i].first, max);
+	}
+
+	return max;
 }
 
 int findLongestIdleTime(std::vector<std::pair<int, int>>& times) {

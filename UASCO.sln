@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "milk2", "milk2\milk2.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "transform", "transform\transform.vcxproj", "{A2BCB9CB-4992-4D41-8263-DB4521B1899D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "namenum", "namenum\namenum.vcxproj", "{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{A2BCB9CB-4992-4D41-8263-DB4521B1899D}.Release|x64.Build.0 = Release|x64
 		{A2BCB9CB-4992-4D41-8263-DB4521B1899D}.Release|x86.ActiveCfg = Release|Win32
 		{A2BCB9CB-4992-4D41-8263-DB4521B1899D}.Release|x86.Build.0 = Release|Win32
+		{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}.Debug|x64.ActiveCfg = Debug|x64
+		{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}.Debug|x64.Build.0 = Debug|x64
+		{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}.Debug|x86.ActiveCfg = Debug|Win32
+		{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}.Debug|x86.Build.0 = Debug|Win32
+		{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}.Release|x64.ActiveCfg = Release|x64
+		{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}.Release|x64.Build.0 = Release|x64
+		{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}.Release|x86.ActiveCfg = Release|Win32
+		{CBBDB867-F21B-4DB1-93A8-FECB21D48ACD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

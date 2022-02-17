@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "namenum", "namenum\namenum.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "palsquare", "palsquare\palsquare.vcxproj", "{C0D225D4-00F0-4C84-A4B6-135A4A70033D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dualpal", "dualpal\dualpal.vcxproj", "{A4F52147-8E61-4B8B-A239-25A5AD757F1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{C0D225D4-00F0-4C84-A4B6-135A4A70033D}.Release|x64.Build.0 = Release|x64
 		{C0D225D4-00F0-4C84-A4B6-135A4A70033D}.Release|x86.ActiveCfg = Release|Win32
 		{C0D225D4-00F0-4C84-A4B6-135A4A70033D}.Release|x86.Build.0 = Release|Win32
+		{A4F52147-8E61-4B8B-A239-25A5AD757F1E}.Debug|x64.ActiveCfg = Debug|x64
+		{A4F52147-8E61-4B8B-A239-25A5AD757F1E}.Debug|x64.Build.0 = Debug|x64
+		{A4F52147-8E61-4B8B-A239-25A5AD757F1E}.Debug|x86.ActiveCfg = Debug|Win32
+		{A4F52147-8E61-4B8B-A239-25A5AD757F1E}.Debug|x86.Build.0 = Debug|Win32
+		{A4F52147-8E61-4B8B-A239-25A5AD757F1E}.Release|x64.ActiveCfg = Release|x64
+		{A4F52147-8E61-4B8B-A239-25A5AD757F1E}.Release|x64.Build.0 = Release|x64
+		{A4F52147-8E61-4B8B-A239-25A5AD757F1E}.Release|x86.ActiveCfg = Release|Win32
+		{A4F52147-8E61-4B8B-A239-25A5AD757F1E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

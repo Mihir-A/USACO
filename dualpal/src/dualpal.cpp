@@ -44,9 +44,9 @@ int main() {
     fin.close();
 
     std::ofstream fout("dualpal.out");
-
     int numOfPal = 0;
     std::vector<int> vec;
+
     for (int i = s + 1; numOfPal < num; i++){
         int numOfbasesPal = 0;
         for (int j = 2; j <= 10 ; j ++){

@@ -4,7 +4,7 @@ LANG: C++
 TASK: ride
 */
 
-#include <iostream>
+
 #include <fstream>
 #include <string>
 

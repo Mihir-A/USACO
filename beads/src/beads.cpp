@@ -3,7 +3,7 @@ ID: mihiran1
 LANG: C++
 TASK: beads
 */
-#include <iostream>
+
 #include <fstream>
 #include <string>
 

@@ -3,7 +3,6 @@ ID: mihiran1
 LANG: C++
 TASK: friday
 */
-#include <iostream>
 #include <array>
 #include <fstream>
 #define DAYS_OF_WEEK 7

@@ -3,7 +3,7 @@ ID: mihiran1
 LANG: C++
 TASK: namenum
 */
-#include <iostream>
+
 #include <fstream>
 #include <vector>
 #include <array>

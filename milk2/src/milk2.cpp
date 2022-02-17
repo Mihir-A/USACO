@@ -3,7 +3,7 @@ ID: mihiran1
 LANG: C++
 TASK: milk2
 */
-#include <iostream>
+
 #include <string>
 #include <vector>
 #include <array>

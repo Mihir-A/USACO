@@ -11,21 +11,6 @@ TASK: transform
 
 typedef std::vector<std::vector<bool>> GRID;
 
-void printGrid(GRID& vectorIn, int n) {
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			if (vectorIn[i][j]) {
-				std::cout << "@";
-			}
-			else {
-				std::cout << "-";
-			}
-		}
-		std::cout << '\n';
-	}
-	std::cout << '\n';
-}
-
 bool check90(GRID& vectorIn, GRID& vectorOut, int n) {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {

@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dualpal", "dualpal\dualpal.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "milk", "milk\milk.vcxproj", "{4EB1BF8C-EB9D-471C-AA98-4871B744DE91}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "barn1", "barn1\barn1.vcxproj", "{99D5EC6B-2F63-4475-9402-227CE066047C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{4EB1BF8C-EB9D-471C-AA98-4871B744DE91}.Release|x64.Build.0 = Release|x64
 		{4EB1BF8C-EB9D-471C-AA98-4871B744DE91}.Release|x86.ActiveCfg = Release|Win32
 		{4EB1BF8C-EB9D-471C-AA98-4871B744DE91}.Release|x86.Build.0 = Release|Win32
+		{99D5EC6B-2F63-4475-9402-227CE066047C}.Debug|x64.ActiveCfg = Debug|x64
+		{99D5EC6B-2F63-4475-9402-227CE066047C}.Debug|x64.Build.0 = Debug|x64
+		{99D5EC6B-2F63-4475-9402-227CE066047C}.Debug|x86.ActiveCfg = Debug|Win32
+		{99D5EC6B-2F63-4475-9402-227CE066047C}.Debug|x86.Build.0 = Debug|Win32
+		{99D5EC6B-2F63-4475-9402-227CE066047C}.Release|x64.ActiveCfg = Release|x64
+		{99D5EC6B-2F63-4475-9402-227CE066047C}.Release|x64.Build.0 = Release|x64
+		{99D5EC6B-2F63-4475-9402-227CE066047C}.Release|x86.ActiveCfg = Release|Win32
+		{99D5EC6B-2F63-4475-9402-227CE066047C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

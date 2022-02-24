@@ -69,7 +69,7 @@ int findNumPos(const std::vector<int>& digits) {
 					notDone = false;
 					break;
 				}
-				multipliyPosition[j] = 0;;
+				multipliyPosition[j] = 0;
 				multipliyPosition[j + 1]++;
 
 				multipliers[j] = digits[0];

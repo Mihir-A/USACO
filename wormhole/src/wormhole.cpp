@@ -23,49 +23,57 @@ public:
 		: x(x), y(y), existing(existing), num(num) {}
 };
 
-std::ostream& operator<<(std::ostream& stream, Wormhole& w) {
+int numSol = 0, maxSize = 0, total = 0;
 
-	stream << w.x << " " << w.y;
-	return stream;
-}
-
-
-template< class type>
-std::ostream& operator<<(std::ostream& stream, std::vector<std::vector<type>>& arr) {
-	for (auto& a : arr) {
-		stream << a << "\n";
-	}
-	stream << "\n";
-	return stream;
-}
-
-std::ostream& operator<<(std::ostream& stream, std::vector<Wormhole*>& arr) {
-	for (Wormhole*& a : arr) {
-		if (a) {
-			stream << *a << ", ";
+Wormhole* findWormHole(int x, int y, std::vector<Wormhole>& wormholes) {
+	for (auto& w : wormholes) {
+		if (w.x == x && w.y == y) {
+			return &w;
 		}
-		else {
-			stream << "NA" << ", ";
-		}
-		
 	}
-	return stream;
+	return nullptr;
 }
 
-int findPosib(std::vector<std::vector<Wormhole>>& grid, std::vector<Wormhole>& wormholes) {
+bool checkSol(std::vector<Wormhole>& wormholes) {
+	std::cout << total << "\n";
+	total++;
+	for (int i = 0; i < wormholes.size(); i++) {
 
+		int originalX = wormholes[i].x, originalY = wormholes[i].y;
+		int cowX = wormholes[i].x;
+		int cowY = wormholes[i].y;
 
-	return 0;
+		while (true) {
+			int tmpX = cowX;
+			cowX = findWormHole(cowX, cowY, wormholes)->paired->x;
+			cowY = findWormHole(tmpX, cowY, wormholes)->paired->y;
+			
+			int tmp = cowX;
+			cowX = 2147483647;
+			for (auto& a : wormholes) {
+				if (a.x > tmp && a.y == cowY) {
+					cowX = std::min(cowX, a.x);
+				}
+			}
+			if (cowX == 2147483647) {
+				break;
+			}
+			if (originalX == cowX && originalY == cowY) {
+				return true;
+			}
+		}
+	}
+	return false;
 }
 
-void findPairs(std::vector<Wormhole>& wormholes, int n) {
+void findSol(std::vector<Wormhole> wormholes, int n) {
 	for (int i = n + 1; i < wormholes.size(); i++) {
 		if (wormholes[i].paired == nullptr) {
 			wormholes[i].paired = &wormholes[n];
 			wormholes[n].paired = &wormholes[i];
 			for (int w = n; w < wormholes.size(); w++) {
 				if (wormholes[w].paired == nullptr) {
-					findPairs(wormholes, w);
+					findSol(wormholes, w);
 					break;
 				}
 			}
@@ -74,19 +82,14 @@ void findPairs(std::vector<Wormhole>& wormholes, int n) {
 					break;
 				}
 				if (g == wormholes.size() - 1) {
-					for (auto& dbg : wormholes) {
-						std::cout << dbg.num << " is paired with " << dbg.paired->num << "\n";
+					if (checkSol(wormholes)) {
+						numSol++;
 					}
 				}
 			}
-			std::cout << " n is " << i << "\n\n\n\n\n";
-
 			wormholes[i].paired = nullptr;
 		}
 	}
-
-	
-
 	for (int i = n; i < wormholes.size(); i++) {
 		wormholes[i].paired = nullptr;
 	}
@@ -94,7 +97,6 @@ void findPairs(std::vector<Wormhole>& wormholes, int n) {
 
 int main() {
 	std::vector<Wormhole> wormholes;
-	std::vector<std::vector<Wormhole*>> grid;
 	std::ifstream fin("wormhole.in");
 	int n;
 	fin >> n;
@@ -106,25 +108,14 @@ int main() {
 		p++;
 	}
 
-	int max = 0;
 	for (auto& w : wormholes) {
-		max = std::max(w.x, max);
-		max = std::max(w.y, max);
+		maxSize = std::max(w.x, maxSize);
+		maxSize = std::max(w.y, maxSize);
 	}
+	maxSize++;
 
-	grid.resize(max + 2);
-	for (auto& vec : grid) {
-		vec.resize(max + 2);
-	}
-	
-	for (int i = 0; i < wormholes.size(); i++ ) {
-		grid[wormholes[i].x][wormholes[i].y] = &(wormholes[i]);
-	}
-	
-	std::cout << grid;
-
-	findPairs(wormholes, 0);
-	std::cout << "Hello World" << "\n";
-
+	std::ofstream fout("wormhole.out");
+	findSol(wormholes, 0);
+	fout << numSol << "\n";
 	return 0;
 }

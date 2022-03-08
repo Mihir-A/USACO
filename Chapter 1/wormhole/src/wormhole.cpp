@@ -3,7 +3,6 @@ ID: mihiran1
 LANG: C++
 TASK: wormhole
 */
-#include <iostream>
 #include <fstream>
 #include <vector>
 #include <array>
@@ -16,8 +15,6 @@ public:
 	bool existing = false;
 	Wormhole* paired = nullptr;
 
-	Wormhole()
-		: x(0), y(0), existing(false) {}
 
 	Wormhole(int x, int y, int num, bool existing = false)
 		: x(x), y(y), existing(existing), num(num) {}
@@ -35,7 +32,6 @@ Wormhole* findWormHole(int x, int y, std::vector<Wormhole>& wormholes) {
 }
 
 bool checkSol(std::vector<Wormhole>& wormholes) {
-	std::cout << total << "\n";
 	total++;
 	for (int i = 0; i < wormholes.size(); i++) {
 

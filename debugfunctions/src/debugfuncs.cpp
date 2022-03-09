@@ -4,11 +4,12 @@
 
 
 template<size_t size, class type>
-std::ostream& operator<<(std::ostream& stream, std::array<type, size>& arr) {
+std::ostream& operator<<(std::ostream& stream, const std::array<type, size>& arr) {
+	stream << "[ ";
 	for (auto& a : arr) {
 		stream << a << ", ";
 	}
-	stream << "\n";
+	stream << "]"
 	return stream;
 }
 

@@ -24,8 +24,14 @@ std::ostream& operator<<(std::ostream& stream, std::vector<std::vector<type>>& a
 
 template< class type>
 std::ostream& operator<<(std::ostream& stream, std::vector<type>& arr) {
-	for (auto& a : arr) {
-		stream << a << ", ";
-	}
+	stream << "[";
+		for (int i = 0; i < arr.size(); i++) {
+			if (i == arr.size() - 1) {
+				stream << arr[i] << "]";
+			}
+			else {
+				stream << arr[i] << ", ";
+			}
+		}
 	return stream;
 }

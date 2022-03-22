@@ -44,6 +44,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "prob3", "Feb2022Contest\pro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feb22Contest", "Feb22Contest", "{27CA406A-D704-457F-9946-71192B3D289A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "numtri", "numtri\numtri.vcxproj", "{6C7C57B1-50B0-4212-858F-92FCF8D231FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -204,6 +206,14 @@ Global
 		{7C6682BC-70D9-426F-BDE1-0440EBD5CC9D}.Release|x64.Build.0 = Release|x64
 		{7C6682BC-70D9-426F-BDE1-0440EBD5CC9D}.Release|x86.ActiveCfg = Release|Win32
 		{7C6682BC-70D9-426F-BDE1-0440EBD5CC9D}.Release|x86.Build.0 = Release|Win32
+		{6C7C57B1-50B0-4212-858F-92FCF8D231FC}.Debug|x64.ActiveCfg = Debug|x64
+		{6C7C57B1-50B0-4212-858F-92FCF8D231FC}.Debug|x64.Build.0 = Debug|x64
+		{6C7C57B1-50B0-4212-858F-92FCF8D231FC}.Debug|x86.ActiveCfg = Debug|Win32
+		{6C7C57B1-50B0-4212-858F-92FCF8D231FC}.Debug|x86.Build.0 = Debug|Win32
+		{6C7C57B1-50B0-4212-858F-92FCF8D231FC}.Release|x64.ActiveCfg = Release|x64
+		{6C7C57B1-50B0-4212-858F-92FCF8D231FC}.Release|x64.Build.0 = Release|x64
+		{6C7C57B1-50B0-4212-858F-92FCF8D231FC}.Release|x86.ActiveCfg = Release|Win32
+		{6C7C57B1-50B0-4212-858F-92FCF8D231FC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

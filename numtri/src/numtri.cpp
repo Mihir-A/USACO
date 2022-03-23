@@ -4,60 +4,47 @@ LANG: C++
 TASK: numtri
 */
 
-#include <iostream>
 #include <fstream>
+#include <array>
 #include <vector>
 
+std::vector<std::vector<int>> triangle;
+std::vector<std::vector<int>> maxVals;
 
-template< class type>
-std::ostream& operator<<(std::ostream& stream, std::vector<type>& arr) {
-	stream << "[";
-	for (int i = 0; i < arr.size(); i++) {
-		if (i == arr.size() - 1) {
-			stream << arr[i] << "]";
-		}
-		else {
-			stream << arr[i] << ", ";
-		}
+int findMax(int x, int y, int val) {
+	if (maxVals[y][x] != -1) {
+		return val + maxVals[y][x];
 	}
-	return stream;
+	else if (y < triangle.size() - 1) {
+		maxVals[y][x] = std::max(findMax(x, y + 1, triangle[y][x]), findMax(x + 1, y + 1, triangle[y][x]));
+		return maxVals[y][x] + val;
+	}
+	else {
+		return val + triangle[y][x];
+	}
 }
-
-class Num
-{
-public:
-	int value;
-	Num* left = nullptr;
-	Num* right = nullptr;
-	Num(int n) {
-		value = n;
-	}
-	Num(){}
-};
 
 int main() {
 	std::ifstream fin("numtri.in");
 	int rowNum;
 	fin >> rowNum;
+	
+	triangle.resize(rowNum);
+	maxVals.resize(rowNum);
 
-	Num* first = new Num;
-
-	std::vector<int> row;
-	std::vector<Num*> prevRow;
-	std::vector<Num*> curRow;
 	for (int i = 1; i <= rowNum; i++) {
-		
-		row.clear();
+		triangle[i - 1].reserve(i);
+		maxVals[i - 1].reserve(i);
+
 		for (int j = 0; j < i; j++) {
 			int tmp;
 			fin >> tmp;
-			row.push_back(tmp);
-
-			curRow.push_back(new Num(tmp));
+			triangle[i - 1].push_back(tmp);
+			maxVals[i - 1].push_back(-1);
 		}
-		std::cout << row << '\n';
 	}
 
-
+	std::ofstream fout("numtri.out");
+	fout << findMax(0, 0, 0) << '\n';
 	return 0;
 }

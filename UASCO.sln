@@ -62,6 +62,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "speeding", "Training\Usaco 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blocks", "Training\Usaco Guide\blocks\blocks.vcxproj", "{E44E7D0D-8576-4FBB-AFCD-09165FC80043}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cowsignal", "Training\Usaco Guide\cowsignal\cowsignal.vcxproj", "{329ECA7F-D169-478E-9212-69A0BEAC9E43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -278,6 +280,14 @@ Global
 		{E44E7D0D-8576-4FBB-AFCD-09165FC80043}.Release|x64.Build.0 = Release|x64
 		{E44E7D0D-8576-4FBB-AFCD-09165FC80043}.Release|x86.ActiveCfg = Release|Win32
 		{E44E7D0D-8576-4FBB-AFCD-09165FC80043}.Release|x86.Build.0 = Release|Win32
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43}.Debug|x64.ActiveCfg = Debug|x64
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43}.Debug|x64.Build.0 = Debug|x64
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43}.Debug|x86.ActiveCfg = Debug|Win32
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43}.Debug|x86.Build.0 = Debug|Win32
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43}.Release|x64.ActiveCfg = Release|x64
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43}.Release|x64.Build.0 = Release|x64
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43}.Release|x86.ActiveCfg = Release|Win32
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -308,6 +318,7 @@ Global
 		{FF7FF711-28FC-4041-9583-55C39E59DE40} = {43E1604D-F64E-4868-A2D8-93A1D3D2ACFD}
 		{356BB22A-E1DD-4E6E-814C-CAB047106DE1} = {D98F7661-AC46-40A2-AE15-82ED86F0CAC9}
 		{E44E7D0D-8576-4FBB-AFCD-09165FC80043} = {D98F7661-AC46-40A2-AE15-82ED86F0CAC9}
+		{329ECA7F-D169-478E-9212-69A0BEAC9E43} = {D98F7661-AC46-40A2-AE15-82ED86F0CAC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {993C1756-7D36-45D1-8EB1-11F6C2FB0CB1}

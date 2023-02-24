@@ -1,49 +1,32 @@
 #include <iostream>
-#include <fstream>
-#include <vector>
-#include <algorithm>
+#include <array>
 
 using namespace std;
 
-int n, ans = 0; 
-vector<pair<int, int>> points;
+std::array<int, 1000000> field{ 0 };
+
+int getSum(int s, int e) {
+    int sum = 0;
+    for (int i = s; i <= e; i++) {
+        sum += field[i];
+    }
+    return sum;
+}
 
 int main() {
-	ifstream fin("triangles.in");
-	fin >> n;
-	points.reserve(n);
+    int n, k;
+    cin >> n >> k;
 
-	for (int i = 0; i < n; i++)
-	{
-		int pointx, pointy;
-		fin >> pointx >> pointy;
-		points.emplace_back(pointx, pointy);
-	}
 
-	for (int i = 0; i < points.size(); i++)
-	{
-		for (int j = i + 1; j < points.size(); j++)
-		{
-			for (int w = j + 1; w < points.size(); w++)
-			{
-				int x1, y1, x2, y2, x3, y3;
-				x1 = points[i].first;
-				y1 = points[i].second;
-				x2 = points[j].first;
-				y2 = points[j].second;
-				x3 = points[w].first;
-				y3 = points[w].second;
+    for (int i = 0; i < n; i++) {
+        int g_i, x_i;
+        cin >> g_i >> x_i;
+        field[x_i] = g_i;
+    }
+    int ans = 0;
+    for (int i = 0; i < field.size(); i++) {
+        ans = max(ans, getSum(i, i + 2 * k));
+    }
+    cout << ans;
 
-				if (y1 - y2 == 0 || y2 - y3 == 0 || y1 - y3 == 0 && x1 - x2 == 0 || x2 - x3 == 0 || x1 - x3)
-				ans = max(ans, abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)));
-
-				//cout << i + 1 << " " << j + 1<< " " << w + 1<< '\n';
-			}
-		}
-	}
-	ofstream fout("triangles.out");
-
-	fout << ans << '\n';
-	
-	return 0;
 }
